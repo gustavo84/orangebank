@@ -34,9 +34,15 @@ public class OrangebankController {
     }
     
     @RequestMapping(method = RequestMethod.POST,value="/accounts/searches")
-    public SearchResponse searchTransactions(@RequestBody SearchTransaction searchTransaction) {
-        SearchResponse response = null;
+    public ResponseEntity<?>  searchTransactions(@RequestBody SearchTransaction searchTransaction) {
         
-        return response;
+        try {
+            SearchResponse searchresponse = orangebankBussiness.searchTransactions(searchTransaction);
+            return new ResponseEntity<>(searchresponse,HttpStatus.ACCEPTED);
+        } catch (Exception e) {
+            return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
+        }
+        
+
     }
 }
