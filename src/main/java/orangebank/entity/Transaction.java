@@ -2,6 +2,7 @@ package orangebank.entity;
 
 import java.util.Date;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
@@ -11,7 +12,8 @@ public class Transaction {
     @Id
     private String reference;
     
-    private String account_iban;
+
+    private String accountiban;
     
     private Date date;
     
@@ -28,7 +30,7 @@ public class Transaction {
             String description) {
         super();
         this.reference = reference;
-        this.account_iban = account_iban;
+        this.accountiban = account_iban;
         this.date = date;
         this.amount = amount;
         this.fee = fee;
@@ -44,11 +46,11 @@ public class Transaction {
     }
 
     public String getAccount_iban() {
-        return account_iban;
+        return accountiban;
     }
 
     public void setAccount_iban(String account_iban) {
-        this.account_iban = account_iban;
+        this.accountiban = account_iban;
     }
 
     public Date getDate() {

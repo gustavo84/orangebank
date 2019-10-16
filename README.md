@@ -25,7 +25,8 @@
 
 Es posible usar la interfaz de swagger para realizar los test, la interfaz invoca a los métodos POST definidos en la prueba:
 
-http://localhost:8080/accounts/transactions
+http://localhost:8080/accounts/transactions/searches
+
 http://localhost:8080/accounts/searches
 
 
@@ -238,6 +239,14 @@ http://localhost:8080/accounts/searches
   "amount": 3193.38,
   "fee": 3.18
 }
+
+###TES12 Search transactions --PRECONDICIÓN HABER CREADO TRANSACCIONES
+
+http://localhost:8080/swagger-ui.html#/orangebank-controller/searchTransactionByAccountIbanUsingGET
+
+url:
+
+http://localhost:8080/accounts/account/searches?accountIban=ES9820385778983000760236&order=ASC
 
 
 
