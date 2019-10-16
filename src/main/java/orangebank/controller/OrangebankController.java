@@ -38,7 +38,7 @@ public class OrangebankController {
         
         try {
             SearchResponse searchresponse = orangebankBussiness.searchTransactions(searchTransaction);
-            return new ResponseEntity<>(searchresponse,HttpStatus.ACCEPTED);
+            return new ResponseEntity<>(searchresponse,HttpStatus.OK);
         } catch (Exception e) {
             return new ResponseEntity<>(e.getMessage(),HttpStatus.BAD_REQUEST);
         }

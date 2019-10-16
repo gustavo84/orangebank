@@ -7,11 +7,11 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import orangebank.entity.Transaction;
 import orangebank.entity.AccountBalance;
 import orangebank.entity.SearchResponse;
 import orangebank.entity.SearchTransaction;
 import orangebank.entity.SearchTransaction.Chanel;
+import orangebank.entity.Transaction;
 import orangebank.repository.AccountBalanceRepository;
 import orangebank.repository.TransactionRepository;
 
