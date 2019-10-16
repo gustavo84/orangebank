@@ -2,11 +2,13 @@ package orangebank.bussiness;
 
 
 import java.util.Date;
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import orangebank.controller.OrangebankController.OrderBy;
 import orangebank.entity.AccountBalance;
 import orangebank.entity.SearchResponse;
 import orangebank.entity.SearchTransaction;
@@ -92,6 +94,12 @@ public class OrangebankBussiness {
         return response;
         // TODO Auto-generated method stub
 
+    }
+
+    public List<Transaction> searchTransactionByAccountIban(String accountIban,OrderBy order) {
+
+        return OrderBy.ASC.equals(order)? transactionRep.findByAccountibanOrderByAmountAsc(accountIban): transactionRep.findByAccountibanOrderByAmountDesc(accountIban);
+       
     }
 
 

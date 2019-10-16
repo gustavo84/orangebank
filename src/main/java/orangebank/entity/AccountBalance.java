@@ -11,7 +11,9 @@ public class AccountBalance {
     AccountBalance(){}
     
     @Id
-    private String account_iban;
+    private String accountiban;
+    
+
     
 
     
@@ -19,22 +21,22 @@ public class AccountBalance {
 
 
 
-    public AccountBalance(String account_iban, Double totalAmount) {
+    public AccountBalance(String accountiban, Double totalAmount) {
         super();
-        this.account_iban = account_iban;
+        this.accountiban = accountiban;
         this.totalAmount = totalAmount;
     }
 
 
 
-    public String getAccount_iban() {
-        return account_iban;
+    public String getAccountiban() {
+        return accountiban;
     }
 
 
 
-    public void setAccount_iban(String account_iban) {
-        this.account_iban = account_iban;
+    public void setAccountiban(String accountiban) {
+        this.accountiban = accountiban;
     }
 
 

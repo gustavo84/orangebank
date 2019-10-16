@@ -21,6 +21,8 @@ public class DataLoader  implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
         AccountBalance.save(new AccountBalance("ES9820385778983000760236", 55555.7));
+        AccountBalance.save(new AccountBalance("ES9820385778983000760235", 5555555.7));
+        AccountBalance.save(new AccountBalance("ES9820385778983000760233", 5555555.7));
     }
 
 }
