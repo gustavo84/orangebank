@@ -1,5 +1,28 @@
 ## orangebank
 
+
+#HOW TO EXECUTE
+
+
+##Option 1:
+
+1- git clone https://github.com/gustavo84/orangebank
+
+2- cd orangebank
+
+3- java -jar target/orangebank-0.1.0.jar
+
+
+##Option 2:
+
+1- git clone https://github.com/gustavo84/orangebank
+
+2- cd orangebank
+
+3- mvn clean install | java -jar target/orangebank-0.1.0.jar
+
+#DETALLES PARA EJECUCIÓN
+
 Es posible usar la interfaz de swagger para realizar los test, la interfaz invoca a los métodos POST definidos en la prueba:
 
 http://localhost:8080/accounts/transactions
@@ -216,17 +239,5 @@ http://localhost:8080/accounts/searches
   "fee": 3.18
 }
 
-#HOW TO EXECUTE
 
-
-##Option 1:
-1- git clone https://github.com/gustavo84/orangebank
-2- cd orangebank
-3- java -jar target/orangebank-0.1.0.jar
-
-
-##Option 2:
-1- git clone https://github.com/gustavo84/orangebank
-2- cd orangebank
-3- mvn clean install | java -jar target/orangebank-0.1.0.jar
 

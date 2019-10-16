@@ -11,13 +11,16 @@ import orangebank.entity.*;
 public class DataLoader  implements ApplicationRunner {
     
     @Autowired
-    AccountBalanceRepository AccountBalance;
+    private AccountBalanceRepository AccountBalance;
     
 
-
+    /**
+     * This method is for preload account balance for test ES9820385778983000760236,
+     * because in the transaction there is one validation with totalaccount
+     */
     @Override
     public void run(ApplicationArguments args) throws Exception {
-        AccountBalance.save(new AccountBalance("ES9820385778983000760236",55555.7));
+        AccountBalance.save(new AccountBalance("ES9820385778983000760236", 55555.7));
     }
 
 }
