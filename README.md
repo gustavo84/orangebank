@@ -215,3 +215,18 @@ http://localhost:8080/accounts/searches
   "amount": 3193.38,
   "fee": 3.18
 }
+
+#HOW TO EXECUTE
+
+
+##Option 1:
+1- git clone https://github.com/gustavo84/orangebank
+2- cd orangebank
+3- java -jar target/orangebank-0.1.0.jar
+
+
+##Option 2:
+1- git clone https://github.com/gustavo84/orangebank
+2- cd orangebank
+3- mvn clean install | java -jar target/orangebank-0.1.0.jar
+
