@@ -248,5 +248,12 @@ url:
 
 http://localhost:8080/accounts/account/searches?accountIban=ES9820385778983000760236&order=ASC
 
+#EXECUTING USING DOCKER
+
+mvn install dockerfile:build
+docker run -e "SPRING_PROFILES_ACTIVE=prod" -p 8080:8080 -t springio/1
+docker ps 
+
+docker stop
 
 
