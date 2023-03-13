@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: orangebank
+  cloud:
+    kubernetes:
+      config:
+        enabled: true
