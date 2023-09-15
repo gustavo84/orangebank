@@ -1,4 +1,4 @@
-package orangebank.controller;
+package ecommerce.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,11 +6,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import orangebank.bussiness.OrangebankBussiness;
-import orangebank.entity.SearchResponse;
-import orangebank.entity.AccountBalance;
-import orangebank.entity.SearchTransaction;
-import orangebank.entity.Transaction;
+import ecommerce.bussiness.OrangebankBussiness;
+import ecommerce.entity.AccountBalance;
+import ecommerce.entity.SearchResponse;
+import ecommerce.entity.SearchTransaction;
+import ecommerce.entity.Price;
 
 import java.util.List;
 
@@ -28,7 +28,7 @@ public class OrangebankController {
     private OrangebankBussiness orangebankBussiness;
     
     @RequestMapping(method = RequestMethod.POST,value="/accounts/transactions")
-    public ResponseEntity<?> createTransaction(@RequestBody Transaction transaction) {
+    public ResponseEntity<?> createTransaction(@RequestBody Price transaction) {
 
         try {
             orangebankBussiness.createTransaction(transaction);
@@ -55,7 +55,7 @@ public class OrangebankController {
     
     @RequestMapping(method = RequestMethod.GET,value="/accounts/account/searches")
     public ResponseEntity<?>  searchTransactionByAccountIban(@RequestParam String accountIban,@RequestParam(defaultValue ="ASC") OrderBy order) {
-            List<Transaction> listAccount = orangebankBussiness.searchTransactionByAccountIban(accountIban,order);
+            List<Price> listAccount = orangebankBussiness.searchTransactionByAccountIban(accountIban,order);
             return new ResponseEntity<>(listAccount,HttpStatus.OK);
     }
 }

@@ -1,4 +1,4 @@
-package orangebank.entity;
+package ecommerce.entity;
 
 import java.util.Date;
 
@@ -7,7 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class Transaction {
+public class Price {
 
     @Id
     private String reference;
@@ -23,10 +23,10 @@ public class Transaction {
     
     private String description;
 
-    public Transaction() {}
+    public Price() {}
     
     
-    public Transaction(String reference, String account_iban, Date date, Double amount, Double fee,
+    public Price(String reference, String account_iban, Date date, Double amount, Double fee,
             String description) {
         super();
         this.reference = reference;

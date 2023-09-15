@@ -1,4 +1,4 @@
-package orangebank.bussiness;
+package ecommerce.bussiness;
 
 
 import java.util.Date;
@@ -8,14 +8,14 @@ import java.util.concurrent.TimeUnit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import orangebank.controller.OrangebankController.OrderBy;
-import orangebank.entity.AccountBalance;
-import orangebank.entity.SearchResponse;
-import orangebank.entity.SearchTransaction;
-import orangebank.entity.SearchTransaction.Chanel;
-import orangebank.entity.Transaction;
-import orangebank.repository.AccountBalanceRepository;
-import orangebank.repository.TransactionRepository;
+import ecommerce.controller.OrangebankController.OrderBy;
+import ecommerce.entity.AccountBalance;
+import ecommerce.entity.SearchResponse;
+import ecommerce.entity.SearchTransaction;
+import ecommerce.entity.Price;
+import ecommerce.entity.SearchTransaction.Chanel;
+import ecommerce.repository.AccountBalanceRepository;
+import ecommerce.repository.TransactionRepository;
 
 
 
@@ -29,7 +29,7 @@ public class OrangebankBussiness {
     @Autowired
     private TransactionRepository transactionRep;
 
-    public void createTransaction(Transaction transaction) throws Exception {
+    public void createTransaction(Price transaction) throws Exception {
         if (accountBalance.existsById(transaction.getAccount_iban())) {
             AccountBalance ac = accountBalance.findById(transaction.getAccount_iban()).get();
             // It is IMPORTANT to note that a transaction that leaves the total account
@@ -55,7 +55,7 @@ public class OrangebankBussiness {
     public SearchResponse searchTransactions(SearchTransaction searchTransaction) throws Exception {
         SearchResponse response = null;
         if (transactionRep.existsById(searchTransaction.getReference())) {
-            Transaction transaction = transactionRep.findById(searchTransaction.getReference()).get();
+            Price transaction = transactionRep.findById(searchTransaction.getReference()).get();
 
             long diff = new Date().getTime() - transaction.getDate().getTime();
             if (TimeUnit.DAYS.convert(diff, TimeUnit.MILLISECONDS) == 0) {
@@ -96,7 +96,7 @@ public class OrangebankBussiness {
 
     }
 
-    public List<Transaction> searchTransactionByAccountIban(String accountIban,OrderBy order) {
+    public List<Price> searchTransactionByAccountIban(String accountIban,OrderBy order) {
 
         return OrderBy.ASC.equals(order)? transactionRep.findByAccountibanOrderByAmountAsc(accountIban): transactionRep.findByAccountibanOrderByAmountDesc(accountIban);
        

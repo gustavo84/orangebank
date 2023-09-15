@@ -1,12 +1,12 @@
-package orangebank.bussiness;
+package ecommerce.bussiness;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.ApplicationRunner;
 import org.springframework.stereotype.Component;
 
-import orangebank.repository.AccountBalanceRepository;
-import orangebank.entity.*;
+import ecommerce.entity.*;
+import ecommerce.repository.AccountBalanceRepository;
 @Component
 public class DataLoader  implements ApplicationRunner {
     

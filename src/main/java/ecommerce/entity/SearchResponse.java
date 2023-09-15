@@ -1,4 +1,4 @@
-package orangebank.entity;
+package ecommerce.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 

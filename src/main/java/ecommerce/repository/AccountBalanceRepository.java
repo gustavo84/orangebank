@@ -1,8 +1,8 @@
-package orangebank.repository;
+package ecommerce.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import orangebank.entity.AccountBalance;
+import ecommerce.entity.AccountBalance;
 
 public interface AccountBalanceRepository  extends CrudRepository<AccountBalance, String> { 
     

@@ -1,4 +1,4 @@
-package orangebank.entity;
+package ecommerce.entity;
 
 public class SearchTransaction {
     
