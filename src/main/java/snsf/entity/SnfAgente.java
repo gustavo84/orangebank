@@ -1,4 +1,4 @@
-package orangebank.entity;
+package snsf.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

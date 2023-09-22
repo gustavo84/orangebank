@@ -1,4 +1,4 @@
-package orangebank.controller;
+package snsf.controller;
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -6,11 +6,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import org.springframework.web.bind.annotation.RestController;
 
-import orangebank.bussiness.OrangebankBussiness;
-
-
-import orangebank.entity.SnfAgente;
-
+import snsf.bussiness.AgentBussiness;
+import snsf.entity.SnfAgente;
 
 import java.util.List;
 
@@ -20,10 +17,10 @@ import org.springframework.http.ResponseEntity;
 
 
 @RestController
-public class OrangebankController {
+public class AgentController {
    
     @Autowired
-    private OrangebankBussiness orangebankBussiness;
+    private AgentBussiness orangebankBussiness;
 
     
     

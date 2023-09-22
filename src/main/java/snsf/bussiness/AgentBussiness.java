@@ -1,4 +1,4 @@
-package orangebank.bussiness;
+package snsf.bussiness;
 
 
 import java.util.Date;
@@ -10,16 +10,15 @@ import org.springframework.stereotype.Service;
 
 import com.google.common.collect.Lists;
 
-import orangebank.entity.SnfAgente;
-
-import orangebank.repository.AgentRepository;
+import snsf.entity.SnfAgente;
+import snsf.repository.AgentRepository;
 
 
 
 
 
 @Service
-public class OrangebankBussiness {
+public class AgentBussiness {
 
     @Autowired
     private AgentRepository agentsRepository;
